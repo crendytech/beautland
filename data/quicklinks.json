@@ -1,0 +1,30 @@
+[
+    {
+        "value": [
+            {"href": "#", "label": "About"},
+            {"href": "#", "label": "Jobs"},
+            {"href": "#", "label": "Branding"},
+            {"href": "#", "label": "Newsroom"}
+        ],
+        "label": "Company"
+    },
+    {
+        "value": [
+            {"href": "#", "label": "College"},
+            {"href": "#", "label": "Support"},
+            {"href": "#", "label": "Safety"},
+            {"href": "#", "label": "StreamKit"}
+        ],
+        "label": "Resources"
+    },
+    {
+        "value": [
+            {"href": "#", "label": "Policy"},
+            {"href": "#", "label": "Faq"},
+            {"href": "#", "label": "Return & Delivery"},
+            {"href": "#", "label": "Tracking"}
+        ],
+        "label": "Terms & Condition"
+    },
+    {}
+]
