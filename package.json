@@ -1,7 +1,12 @@
 {
-  "name": "beautland",
-  "version": "0.1.0",
+  "name": "beautland-teamapt-translation-exercise",
+  "version": "1.0.0",
   "private": true,
+  "description": "Teamapt Frontend Translation Test",
+  "author": "Olusegun Olaniyi",
+  "keywords": [
+    "nextjs", "reactjs", "tailwindcss", "react-spring"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

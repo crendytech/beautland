@@ -61,38 +61,42 @@ const AfterHero = () => {
   }, [bgAnimationApi, imgAnimationApi, transpaneAnimationApi, inView]);
 
     return (
-        <div ref={ref} className="relative mt-[70px] pb-20"><img src={`/static/images/flower.svg`} alt="" className="w-[250px] h-auto absolute top-[-170px] left-[-20px] rotate-[110deg] z-50" />
-            <div className="relative top-[-70px]">
+        <div ref={ref} className="relative pb-20">
+            <img src={`/static/images/flower.svg`} alt="" className="w-[250px] h-auto absolute top-[-170px] left-[-20px] rotate-[110deg] z-50" />
+            <div className="relative container top-[-70px]">
                 <animated.div className="absolute right-[5rem] z-30" style={videoAnimation}>
                     <Video />
                 </animated.div>
             </div>
-            <div className="flex items-center relative">
-                <div className="w-[32%]">
-                    <div className="absolute top-[50px] left-[420px] z-30">
-                        <animated.div style={transpaneAnimation}>
-                            <div className="transpane w-[135px] h-[135px] rounded-full border flex items-center justify-center relative">
-                                <img src={`/static/images/explore.svg`} alt="" className="w-full h-full" />
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA0MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwLjc1IDEuNUwyMC43NSA1MSIgc3Ryb2tlPSIjRjU2ODNDIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjEgNTFDMjEuOTUyNCA0NS42NjY3IDI3LjI4NTcgMzUgNDEgMzUiIHN0cm9rZT0iI0Y1NjgzQyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTIxIDUxQzIwLjA0NzYgNDUuNjY2NyAxNC43MTQzIDM1IDEgMzUiIHN0cm9rZT0iI0Y1NjgzQyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==" width={100} height={100} alt="explore product" className="w-[40%] h-[40%] absolute" />
-                            </div>
-                        </animated.div>
-                    </div>
-                    <animated.div style={bgAnimation} className="w-[470px] overflow-hidden h-[520px] bg-[#b7abd9]/80 absolute left-[125px] rounded-t-full">
-                        <animated.img style={imgAnimation} src={`/static/images/curiology.jpeg`} alt="products" className="w-full h-full ml-5 rounded-t-full object-cover object-bottom" />
-                    </animated.div>
+            <div className="grid grid-cols-3 h-[95vh] relative">
+                <div className="col-span-1"></div>
+                <div className="col-span-2 bg-c-purple-100">
                 </div>
-                <div className="bg-c-purple-100 pt-60 pb-40 pl-64 w-[68%]">
-                    <div className="w-[80%]">
-                        {aftheroTransitions(({ opacity }, item) => (
-                            <animated.div
-                                style={{
-                                opacity: opacity.to(item.op),
-                                transform: opacity.to(item.trans).to((y) => `translate3d(0,${y}px,0)`),
-                                }}
-                            >
-                                {item.component}
+                <div className="absolute w-full">
+                    <div className="flex items-center relative container h-fit mx-auto">
+                        <div className="w-[32%] border">
+                            <div className="absolute top-[10%] left-[32%] z-30">
+                                <animated.div style={transpaneAnimation}>
+                                    <div className="transpane w-[135px] h-[135px] rounded-full border flex items-center justify-center relative">
+                                        <img src={`/static/images/explore.svg`} alt="" className="w-full h-full" />
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA0MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwLjc1IDEuNUwyMC43NSA1MSIgc3Ryb2tlPSIjRjU2ODNDIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjEgNTFDMjEuOTUyNCA0NS42NjY3IDI3LjI4NTcgMzUgNDEgMzUiIHN0cm9rZT0iI0Y1NjgzQyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTIxIDUxQzIwLjA0NzYgNDUuNjY2NyAxNC43MTQzIDM1IDEgMzUiIHN0cm9rZT0iI0Y1NjgzQyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==" width={100} height={100} alt="explore product" className="w-[40%] h-[40%] absolute" />
+                                    </div>
+                                </animated.div>
+                            </div>
+                            <animated.div style={bgAnimation} className="w-[600px] overflow-hidden h-[90%] bg-[#b7abd9]/80 absolute left-[1%] top-0 rounded-t-full">
+                                <animated.img style={imgAnimation} src={`/static/images/curiology.jpeg`} alt="products" className="w-full h-full ml-5 rounded-t-full object-cover object-bottom" />
                             </animated.div>
-                        ))}
+                        </div>
+                        <div className="pt-60 pb-40 pl-[18%] w-[68%]">
+                            <div className="w-[85%]">
+                                {aftheroTransitions(({ opacity }, item) => (
+                                    <animated.div
+                                        style={{ opacity: opacity.to(item.op), transform: opacity.to(item.trans).to((y) => `translate3d(0,${y}px,0)`)}} >
+                                        {item.component}
+                                    </animated.div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

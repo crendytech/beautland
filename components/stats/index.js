@@ -58,24 +58,34 @@ export const Statistics = () => {
     }, [bgAnimationApi, imageAnimationApi, inView]);
 
     return (
-        <div ref={ref} className="relative min-h-90vh">
-            <div className="flex items-center relative">
-                <div className="bg-[#ffe5de] pt-32 pb-32 px-32 w-[77%]">
-                    <div className="w-[70%]">
-                        {statisticsTransition(({ opacity }, item) => (
-                            <animated.div style={{ opacity: opacity.to(item.op), transform: opacity.to(item.trans).to((y) => `translate3d(0,${y}px,0)`) }}>
-                                {item.component}
+        <div ref={ref} className="grid grid-cols-10 min-h-[90vh]">
+            <div className="col-span-7 bg-[#ffe5de]">
+            </div>
+            <div className="col-span-3">
+            </div>
+            <div className="absolute w-full">
+                <div  className="relative min-h-90vh container">
+                    <div className="flex items-center relative">
+                        <div className="pt-32 pb-32 w-[77%]">
+                            <div className="w-[70%]">
+                                {statisticsTransition(({ opacity }, item) => (
+                                    <animated.div style={{ opacity: opacity.to(item.op), transform: opacity.to(item.trans).to((y) => `translate3d(0,${y}px,0)`) }}>
+                                        {item.component}
+                                    </animated.div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="w-[23%]">
+                            <animated.div style={bgAnimation} className="w-[420px] overflow-hidden h-[550px] flex items-end bg-[#f6866a] absolute top-[30px] right-[90px] rounded-full">
+                                <animated.img style={imageAnimation} src={`/static/images/woman.png`} alt="" className="rounded-t-full h-full object-cover object-bottom"  />
                             </animated.div>
-                        ))}
+                        </div>
                     </div>
                 </div>
-                <div className="w-[23%]">
-                    <animated.div style={bgAnimation} className="w-[420px] overflow-hidden h-[550px] flex items-end bg-[#f6866a] absolute top-[30px] right-[90px] rounded-full">
-                        <animated.img style={imageAnimation} src={`/static/images/woman.png`} alt="" className="rounded-t-full h-full object-cover object-bottom"  />
-                    </animated.div>
-                </div>
             </div>
+
         </div>
+        
     )
 }
 
