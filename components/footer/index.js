@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Quicklinks from "./quickLinks"
+import Quicklinks from "./quicklinks"
 import { Subscribe } from "./subscribe"
 import { About } from "./about"
 import { Products } from "./products"
