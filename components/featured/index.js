@@ -42,7 +42,7 @@ export const Featured = () => {
                 <div className="space-y-6 pt-6">
                     {ibTransitions(({ opacity }, item) => (
                         <animated.div style={{ opacity: opacity.to(item.op), transform: opacity.to(item.trans).to((y) => `translate3d(0,${y}px,0)`) }}>
-                        {item.component}
+                            {item.component}
                         </animated.div>
                     ))}
                 </div>
@@ -79,17 +79,17 @@ const Cta = () => {
 
 const ProductCard = ({title, image, price}) => {
     return (
-        <>
+        <div className="flex flex-col space-y-4">
         <div className="bg-white w-full h-[370px] flex justify-center item-center">
             <Image width={200} height={200} src={`/static/images/${image}`} alt="product" className=" mx-auto object-scale-down scale-[0.7]" />
         </div>
             <Link href={`#`}>
-                <a className="text-center space-y-2">
+                <a className="text-center space-y-2 mt-3">
                     <p className="recoleta text-xl">{title}</p>
                     <p className="text-neutral-300 text-base">${price}</p>
                 </a>
             </Link>
-        </>
+        </div>
     )
 }
 
