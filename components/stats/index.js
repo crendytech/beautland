@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useTransition, animated } from "react-spring";
@@ -69,8 +68,8 @@ export const Statistics = () => {
                 </div>
             </div>
             <div className="col-span-3 relative h-full">
-                <animated.div  className="w-[420px] h-[90%] top-[5%] absolute overflow-hidden flex items-end bg-[#f6866a] left-[-150px] rounded-full">
-                    <animated.img src={`/static/images/woman.png`} alt="" className="rounded-t-full h-full object-cover object-bottom"  />
+                <animated.div style={bgAnimation}  className="w-[420px] h-[90%] top-[5%] absolute overflow-hidden flex items-end bg-[#f6866a] left-[-150px] rounded-full">
+                    <animated.img style={imageAnimation} src={`/static/images/woman.png`} alt="" className="rounded-t-full h-full object-cover object-bottom"  />
                 </animated.div>
             </div>
         </div>
@@ -118,7 +117,7 @@ const Description = () => {
 
 const stats = [
     {label: "Product Users", value: "7M+"},
-    {label: "Brand Product Users", value: "99+"},
+    {label: "Brand Product", value: "99+"},
     {label: "Product Reviews", value: "7M"}
 ]
 const buildStatisticsTransitions = (stats = []) => {
