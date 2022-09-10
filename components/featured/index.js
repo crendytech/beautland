@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image"
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs"
+import { HiOutlineHeart, HiShoppingBag } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { useTransition, animated } from "react-spring";
 import products from "../../data/products.json";
@@ -37,7 +39,7 @@ export const Featured = () => {
     }, [inView]);
 
     return (
-        <div ref={ref} className="container pt-16 py-36 relative">
+        <div ref={ref} className="container py-40 relative">
             <div className="w-full grid grid-cols-3 gap-x-5 gap-y-7 items-start">
                 <div className="space-y-6 pt-6">
                     {ibTransitions(({ opacity }, item) => (
@@ -78,10 +80,12 @@ const Cta = () => {
 }
 
 const ProductCard = ({title, image, price}) => {
+    const [active, setActive] = useState(false)
     return (
-        <div className="flex flex-col space-y-4">
-        <div className="bg-white w-full h-[370px] flex justify-center item-center">
-            <Image width={200} height={200} src={`/static/images/${image}`} alt="product" className=" mx-auto object-scale-down scale-[0.7]" />
+        <div className="flex flex-col space-y-4" onMouseEnter={() => {setActive(true)}} onMouseLeave={() => {setActive(false)}}>
+        <div className="bg-white w-full rph flex justify-center item-center">
+            <img src={`/static/images/${image}`} alt="product" className=" mx-auto object-scale-down scale-[0.7]" />
+            {active && <CardButtons />}
         </div>
             <Link href={`#`}>
                 <a className="text-center space-y-2 mt-3">
@@ -92,6 +96,21 @@ const ProductCard = ({title, image, price}) => {
         </div>
     )
 }
+
+const CardButtons = () => (
+  <div className="flex flex-col items-center justify-center space-y-3 absolute right-[25px] bottom-[105px]">
+    <div className="outline-none bg-primary text-white w-11 h-11 rounded-full">
+      <div className="flex w-full h-full items-center justify-center">
+        <HiShoppingBag size={24} />
+      </div>
+    </div>
+    <div className="outline-none bg-white border border-primary text-primary w-11 h-11 rounded-full">
+      <div className="flex w-full h-full items-center justify-center">
+        <HiOutlineHeart size={24} />
+      </div>
+    </div>
+  </div>
+);
 
 const TITLE_TRANSITIONS = [
   {

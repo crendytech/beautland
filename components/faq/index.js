@@ -32,7 +32,7 @@ export const Faq = () => {
     }, [bgAnimationApi, imageAnimationApi, inView]);
 
     return (
-        <section ref={ref} className="relative pt-40 pb-36 overflow-x-hidden">
+        <section ref={ref} className="relative pt-40 pb-36">
             <picture className="absolute top-[-70px] right-[-50px] rotate-[120deg] z-50 scale-[-1]">
                 <source srcSet="/static/images/flower.svg" type="image/svg" />
                 <img src="/static/images/flower.svg" className="w-[200px] h-auto" alt="" />

@@ -60,6 +60,14 @@ a {
     padding-right: 5rem;
   }
 }
+.rph {
+  height: 450px;
+}
+@media (max-width: 1280px) {
+  .rph{
+    height: 370px;
+  }
+}
 .recoleta
 {
   font-family: Recoleta, sans-serif;
