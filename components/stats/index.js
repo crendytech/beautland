@@ -103,13 +103,13 @@ const StatisticBlock = ({statBlockTransitions}) => {
 
 const Title = () => {
     return (
-        <h2 className="recoleta text-[4rem] leading-snug text-faint-blue mb-10 w-[90%]">We make going all natural <span className="text-primary">Beauty</span>.</h2>
+        <h2 className="recoleta text-[4rem] leading-snug text-faint-blue mb-10 w-[80%]">We make going all natural <span className="text-primary">Beauty</span>.</h2>
     )
 }
 
 const Description = () => {
     return (
-        <div className="w-[90%] mb-12 mt-3">
+        <div className="w-[70%] mb-12 mt-3">
             <p className="text-lg text-neutral-300">Made with nature&apos;s best ingredients — our products&apos; transparent ingredient list allow you to know.</p>
         </div>
     )
