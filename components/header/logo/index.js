@@ -32,10 +32,10 @@ export const Logo = () => {
         },
         {
             path: shapes[0],
-            transform: "translate(95px, 47px) rotate(200deg) scale(0.17)",
+            transform: "translate(105px, 47px) rotate(200deg) scale(0.17)",
             top: "8%",
             left: "5rem",
-            wholeScale: "scale(0.6)",
+            wholeScale: "scale(0.7)",
         },
         ],
         config: {
