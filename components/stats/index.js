@@ -83,7 +83,7 @@ const SingleStatBlock = ({label, value}) => {
             <div className="h-36 w-52 rounded-full -rotate-[60deg]" style={{ background: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 229, 222, 0) 70%)" }}></div>
             <div className="text-center absolute top-[10%] right-[50%] translate-x-[55%]">
                 <p className="mb-3 w-20">{label}</p>
-                <p className="text-d-orange text-4xl headfont">{value}</p>
+                <p className="text-primary text-4xl recoleta">{value}</p>
             </div>
         </div>
     )
