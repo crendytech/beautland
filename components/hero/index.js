@@ -46,9 +46,9 @@ export const Hero = () => {
                     </animated.div>
                 ))}
             </div>
-            <div className="hero-image top-0 w-[49%] h-full">
+            <div className="hero-image top-0 w-[49%] h-[650px]">
                 <div className="relative w-full h-full">
-                    <animated.div style={imageAnimation}>
+                    <animated.div className={`h-full`} style={imageAnimation}>
                         <animated.img src="/static/images/hero.png" alt="" className="h-full w-full object-cover object-bottom" />
                     </animated.div>
                 </div>

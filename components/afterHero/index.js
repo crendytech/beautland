@@ -61,7 +61,7 @@ const AfterHero = () => {
   }, [bgAnimationApi, imgAnimationApi, transpaneAnimationApi, inView]);
 
     return (
-        <div ref={ref} className="relative border-green-600">
+        <div ref={ref} className="relative">
             <img src={`/static/images/flower.svg`} alt="" className="w-[250px] h-auto absolute top-[-170px] left-[-20px] rotate-[110deg] z-50" />
             <div className="relative container top-[-70px]">
                 <animated.div className="absolute right-[5rem] z-30" style={videoAnimation}>
